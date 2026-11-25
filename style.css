@@ -1,0 +1,207 @@
+/* =========================================================
+   Ostberg Advisory — Bookkeeping page
+   All custom selectors use the EG- prefix.
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --EG-color-ink: #202020;
+  --EG-color-muted: #737373;
+  --EG-color-light: #f4f4f4;
+  --EG-color-blue: #d2e2fa;
+  --EG-color-orange: #f15a24;
+  --EG-container-width: 1240px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--EG-color-ink);
+  background: #fff;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+a { color: inherit; }
+button { font: inherit; }
+.EG-container { width: min(var(--EG-container-width), calc(100% - 88px)); margin-inline: auto; }
+
+.EG-topbar { height: 30px; color: #d7d7d7; background: #202020; font-size: 10px; text-transform: uppercase; }
+.EG-topbar__inner, .EG-header__inner, .EG-footer__inner { display: flex; align-items: center; justify-content: space-between; height: 100%; }
+.EG-topbar nav { display: flex; gap: 22px; }
+.EG-topbar a, .EG-main-nav a { text-decoration: none; }
+.EG-header { height: 72px; background: #fff; }
+.EG-logo { font-size: 22px; font-weight: 700; letter-spacing: -.8px; text-decoration: none; }
+.EG-main-nav { display: flex; gap: 30px; padding: 9px 24px; border-radius: 30px; background: #f2f2f2; font-size: 13px; }
+.EG-header__cta { display: inline-flex; align-items: center; gap: 18px; padding: 7px 8px 7px 18px; color: #fff; background: var(--EG-color-ink); border-radius: 24px; text-decoration: none; font-size: 12px; }
+.EG-header__cta span { display: grid; width: 30px; height: 25px; place-items: center; color: #202020; background: var(--EG-color-blue); border-radius: 18px; font-size: 18px; }
+
+.EG-hero { min-height: 490px; padding-top: 22px; padding-bottom: 45px; }
+.EG-breadcrumb { display: flex; align-items: center; gap: 8px; color: #777; font-size: 11px; }
+.EG-breadcrumb a { color: inherit; text-decoration: none; text-underline-offset: 3px; }
+.EG-breadcrumb a:hover { text-decoration: underline; }
+.EG-breadcrumb [aria-current="page"] { color: #202020; }
+.EG-hero__content { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 50px; padding-top: 24px; }
+.EG-eyebrow { display: inline-block; padding: 3px 8px; color: #46617d; background: #dce9f8; border-radius: 3px; font-size: 11px; }
+.EG-hero h1 { margin: 13px 0 12px; font-size: clamp(42px, 5vw, 66px); line-height: 1; letter-spacing: -3px; font-weight: 600; }
+.EG-hero__copy > p { max-width: 510px; margin: 0; color: #555; font-size: 15px; }
+.EG-actions { display: flex; align-items: center; gap: 24px; margin-top: 22px; }
+.EG-button { display: inline-flex; align-items: center; gap: 18px; padding: 7px 8px 7px 17px; color: #fff; background: #202020; border-radius: 24px; text-decoration: none; font-size: 12px; }
+.EG-button span { display: grid; width: 31px; height: 25px; place-items: center; color: #202020; background: var(--EG-color-blue); border-radius: 20px; font-size: 18px; }
+.EG-text-link { font-size: 12px; text-underline-offset: 3px; }
+.EG-hero__visual { position: relative; padding: 0 0 28px 20px; }
+.EG-hero__visual > img { display: block; width: 100%; height: 340px; object-fit: cover; border-radius: 13px; }
+.EG-stats-card { position: absolute; left: -12px; bottom: 0; width: 68%; padding: 7px 15px; color: #fff; background: rgba(35,35,35,.88); border: 1px solid rgba(255,255,255,.15); border-radius: 16px; backdrop-filter: blur(12px); }
+.EG-stat { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 43px; border-bottom: 1px solid rgba(255,255,255,.17); font-size: 10px; }
+.EG-stat:last-child { border-bottom: 0; }
+.EG-stat > span { color: #d5d5d5; text-align: right; }
+.EG-stat strong { font-weight: 500; }
+.EG-stat .EG-stat__value { font-size: 18px; }
+
+.EG-benefits { position: relative; padding: 90px 0 85px; color: #fff; background: #202020; }
+.EG-section-intro { margin: 0 0 36px 16px; }
+.EG-section-intro h2 { margin: 0 0 10px; font-size: 34px; line-height: 1.12; letter-spacing: -1.2px; font-weight: 500; }
+.EG-section-intro p { max-width: 470px; margin: 0; color: #c3c3c3; font-size: 12px; }
+.EG-benefit-grid { display: grid; grid-template-columns: repeat(3, 1fr); overflow: hidden; border-radius: 13px; background: #2b2b2b; }
+.EG-benefit-card { min-height: 210px; padding: 24px 22px; border-right: 1px solid #202020; border-bottom: 1px solid #202020; }
+.EG-benefit-card:nth-child(3n) { border-right: 0; }
+.EG-benefit-card:nth-child(n+4) { border-bottom: 0; }
+.EG-benefit-icon { display: block; margin-bottom: 15px; color: #dce8f8; font-size: 22px; }
+.EG-benefit-card h3 { margin: 0 0 8px; font-size: 14px; font-weight: 600; }
+.EG-benefit-card p { margin: 0; color: #c0c0c0; font-size: 11px; }
+.EG-benefit-card a { display: inline-block; margin-top: 28px; color: #fff; font-size: 10px; text-underline-offset: 3px; }
+
+.EG-pricing { padding-top: 80px; padding-bottom: 100px; }
+.EG-pricing > h2 { margin: 0 0 28px; text-align: center; font-size: 34px; letter-spacing: -1px; font-weight: 600; }
+.EG-pricing-list { width: min(760px, 100%); margin: auto; }
+.EG-pricing-feature, .EG-price-accordion { padding: 12px 18px; background: #f4f4f4; border-radius: 9px; }
+.EG-price-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 39px; font-size: 12px; }
+.EG-price-row > span { white-space: nowrap; }
+.EG-price-row small { display: block; color: #858585; font-size: 10px; }
+.EG-price-row em { margin-left: 8px; padding: 3px 8px; color: #45617e; background: #dce9f8; border-radius: 3px; font-style: normal; font-size: 10px; }
+.EG-price-accordion { margin-top: 9px; }
+.EG-price-accordion summary { display: flex; align-items: center; justify-content: space-between; gap: 15px; cursor: pointer; list-style: none; font-size: 12px; }
+.EG-price-accordion summary::-webkit-details-marker { display: none; }
+.EG-price-accordion summary span { color: #666; }
+.EG-price-accordion summary b { display: inline-grid; width: 20px; height: 20px; margin-left: 8px; place-items: center; color: #46617d; background: #dce9f8; border-radius: 50%; }
+.EG-price-accordion[open] summary b { transform: rotate(45deg); }
+.EG-price-accordion p { margin: 12px 0 2px; color: #666; font-size: 12px; }
+
+.EG-start { position: relative; padding: 80px 0; background: #f5f5f5; }
+.EG-start__inner { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 70px; width: min(1050px, calc(100% - 88px)); }
+.EG-start__steps h2 { margin: 0 0 12px; font-size: 26px; letter-spacing: -.6px; }
+.EG-tabs { display: inline-flex; padding: 3px; background: #fff; border: 1px solid #e6e6e6; border-radius: 22px; }
+.EG-tab { padding: 7px 12px; border: 0; background: transparent; border-radius: 18px; cursor: pointer; font-size: 10px; }
+.EG-tab--active { color: #fff; background: #202020; }
+.EG-step-list { display: grid; gap: 18px; margin: 25px 0 0; padding: 0; list-style: none; }
+.EG-step-list li { display: flex; align-items: flex-start; gap: 14px; }
+.EG-step-list li > span { display: grid; flex: 0 0 28px; width: 28px; height: 28px; place-items: center; background: #dce9f8; border-radius: 50%; font-size: 12px; }
+.EG-step-list h3 { margin: 0 0 3px; font-size: 13px; font-weight: 600; }
+.EG-step-list h3 small { margin-left: 8px; padding: 2px 6px; color: #777; background: #e9e9e9; border-radius: 10px; font-size: 9px; font-weight: 400; }
+.EG-step-list p { margin: 0; color: #777; font-size: 11px; }
+.EG-start-card { padding: 34px; background: #d2e2fa; border-radius: 18px; }
+.EG-start-card h2 { max-width: 390px; margin: 0 0 14px; font-size: 25px; line-height: 1.2; letter-spacing: -.6px; }
+.EG-start-card p { margin: 0 0 20px; color: #4e5a68; font-size: 11px; }
+.EG-start-card__link { display: block; margin-top: 12px; font-size: 10px; }
+
+.EG-related { position: relative; padding-top: 80px; padding-bottom: 75px; }
+.EG-related > h2 { margin: 0 0 32px; font-size: 42px; letter-spacing: -1.4px; font-weight: 600; }
+.EG-related__grid { display: grid; grid-template-columns: .72fr 1.28fr; gap: 22px; }
+.EG-related__links { display: grid; gap: 12px; }
+.EG-related__links > a { display: flex; align-items: center; gap: 15px; min-height: 85px; padding: 15px 18px; background: #f4f4f4; border-radius: 14px; text-decoration: none; }
+.EG-related__icon { color: #303030; font-size: 25px; }
+.EG-related__links strong, .EG-related__links small { display: block; }
+.EG-related__links strong { font-size: 14px; }
+.EG-related__links small { max-width: 190px; color: #666; font-size: 11px; }
+.EG-related__links b { display: grid; flex: 0 0 30px; height: 25px; margin-left: auto; place-items: center; background: var(--EG-color-blue); border-radius: 20px; }
+.EG-related-banner { position: relative; display: block; min-height: 180px; overflow: hidden; border-radius: 14px; color: #fff; }
+.EG-related-banner::after { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.45), transparent); content: ""; }
+.EG-related-banner img { position: absolute; width: 100%; height: 100%; object-fit: cover; }
+.EG-related-banner > span { position: absolute; z-index: 1; bottom: 24px; left: 25px; }
+.EG-related-banner strong, .EG-related-banner small { display: block; }
+.EG-related-banner strong { font-size: 22px; font-weight: 500; }
+.EG-related-banner small { font-size: 11px; }
+.EG-footer { padding: 38px 0; color: #fff; background: #202020; }
+.EG-footer__inner p { margin: 0; font-size: 16px; line-height: 1.3; }
+.EG-footer__inner small { color: #aaa; font-size: 10px; }
+
+@media (max-width: 800px) {
+  .EG-container { width: min(100% - 40px, var(--EG-container-width)); }
+  .EG-topbar__left { gap: 12px !important; }
+  .EG-topbar__right { gap: 10px !important; }
+  .EG-header { height: auto; padding: 18px 0; }
+  .EG-header__inner { flex-wrap: wrap; gap: 16px; }
+  .EG-main-nav { order: 3; width: 100%; justify-content: center; gap: 22px; }
+  .EG-hero { min-height: auto; padding-bottom: 65px; }
+  .EG-hero__content { grid-template-columns: 1fr; gap: 35px; }
+  .EG-hero__visual { padding-left: 12px; }
+  .EG-hero__visual > img { height: 300px; }
+  .EG-stats-card { left: 0; width: 78%; }
+  .EG-benefits { padding: 75px 0 60px; }
+  .EG-benefit-grid { grid-template-columns: repeat(2, 1fr); }
+  .EG-benefit-card:nth-child(3n) { border-right: 1px solid #202020; }
+  .EG-benefit-card:nth-child(2n) { border-right: 0; }
+  .EG-benefit-card:nth-child(n+4) { border-bottom: 1px solid #202020; }
+  .EG-benefit-card:nth-child(n+5) { border-bottom: 0; }
+  .EG-start__inner { grid-template-columns: 1fr; gap: 35px; width: min(100% - 40px, 600px); }
+  .EG-related__grid { grid-template-columns: 1fr; }
+  .EG-related-banner { min-height: 230px; }
+}
+
+@media (max-width: 520px) {
+  .EG-container { width: calc(100% - 32px); }
+  .EG-topbar { height: auto; padding: 9px 0; font-size: 8px; }
+  .EG-topbar__inner { gap: 8px; }
+  .EG-topbar nav { gap: 8px; }
+  .EG-header__inner { gap: 13px; }
+  .EG-logo { font-size: 20px; }
+  .EG-header__cta { font-size: 10px; }
+  .EG-main-nav { gap: 14px; padding: 9px 12px; font-size: 11px; }
+  .EG-hero { padding-top: 16px; }
+  .EG-hero__content { padding-top: 30px; }
+  .EG-hero h1 { font-size: 48px; letter-spacing: -2px; }
+  .EG-hero__copy > p { font-size: 13px; }
+  .EG-hero__visual > img { height: 240px; }
+  .EG-stats-card { width: 90%; padding-inline: 10px; }
+  .EG-stat { min-height: 38px; font-size: 9px; }
+  .EG-stat .EG-stat__value { font-size: 15px; }
+  .EG-section-intro { margin-left: 0; }
+  .EG-section-intro h2 { font-size: 30px; }
+  .EG-benefit-grid { grid-template-columns: 1fr; }
+  .EG-benefit-card, .EG-benefit-card:nth-child(3n), .EG-benefit-card:nth-child(2n), .EG-benefit-card:nth-child(n+5) { min-height: auto; padding: 22px; border-right: 0; border-bottom: 1px solid #202020; }
+  .EG-benefit-card:last-child { border-bottom: 0; }
+  .EG-benefit-card a { margin-top: 18px; }
+  .EG-pricing { padding-top: 60px; padding-bottom: 65px; }
+  .EG-pricing > h2 { font-size: 28px; }
+  .EG-pricing-feature, .EG-price-accordion { padding-inline: 12px; }
+  .EG-price-row { font-size: 11px; }
+  .EG-price-row small { max-width: 210px; }
+  .EG-price-row > span { font-size: 10px; }
+  .EG-start { padding: 70px 0 55px; }
+  .EG-start__inner { width: calc(100% - 32px); }
+  .EG-start-card { padding: 25px; }
+  .EG-start-card h2 { font-size: 23px; }
+  .EG-related { padding-top: 65px; padding-bottom: 55px; }
+  .EG-related > h2 { font-size: 36px; }
+  .EG-related-banner { min-height: 190px; }
+  .EG-footer__inner p { font-size: 13px; }
+}
+
+
+/* Client-status tabs */
+.EG-tabs { gap: 3px; }
+.EG-tab { transition: color .2s ease, background-color .2s ease; white-space: nowrap; }
+.EG-tab:focus-visible { outline: 2px solid #789ac3; outline-offset: 2px; }
+.EG-tab-panel[hidden], .EG-start-card [hidden] { display: none !important; }
+.EG-existing-client { display: flex; align-items: flex-start; gap: 15px; min-height: 150px; padding: 25px 0 0; }
+.EG-existing-client__icon { display: grid; flex: 0 0 34px; width: 34px; height: 34px; place-items: center; color: #24384f; background: #dce9f8; border-radius: 50%; font-size: 18px; }
+.EG-existing-client h3 { margin: 2px 0 7px; font-size: 17px; }
+.EG-existing-client p { max-width: 360px; margin: 0 0 15px; color: #777; font-size: 12px; }
+.EG-existing-client__link { font-size: 12px; font-weight: 600; text-underline-offset: 3px; }
+.EG-existing-client__link span { margin-left: 8px; }
+@media (max-width: 520px) {
+  .EG-tabs { max-width: 100%; }
+  .EG-tab { padding-inline: 9px; font-size: 9px; }
+}
